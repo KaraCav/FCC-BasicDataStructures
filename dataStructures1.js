@@ -20,3 +20,17 @@ function popShift(arr) {
   let shifted = arr.shift();
   return [shifted, popped];
 }
+
+// 5. Remove Items Using splice() to Return 10
+function sumOfTen(arr) {
+  arr.splice(1,2);
+  return arr.reduce((a, b) => a + b);
+}
+console.log(sumOfTen([2, 5, 1, 5, 2, 1]));
+
+// 6. Add Items Using splice()- Splice first 2 params remove items; can replace using the 3rd+ param
+function htmlColorNames(arr) {
+  arr.splice(0,2,'DarkSalmon', 'BlanchedAlmond')
+  return arr;
+} 
+console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurqoise', 'FireBrick']));
