@@ -21,6 +21,10 @@ function popShift(arr) {
   return [shifted, popped];
 }
 
+// LESSON NOTES 1: splice() takes up to 3 params. It both modifies the original array AND returns the removed items
+// on the other hand, slice() copies/extracts, elements to a new array, leaving the original array untouched
+// qffslice param 2 isn't number to take, it's up until which index
+
 // 5. Remove Items Using splice() to Return 10
 function sumOfTen(arr) {
   arr.splice(1,2);
@@ -34,3 +38,22 @@ function htmlColorNames(arr) {
   return arr;
 } 
 console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurqoise', 'FireBrick']));
+
+// 7. Copy Array Items Using slice()
+function forecast(arr) {
+let newArr = arr.slice(2,4);
+  return newArr;
+}
+console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+
+// 8. Copy an Array with the Spread Operator
+// return the original array to the new array a set # of times
+function copyMachine(arr, num) {
+  let newArr = [];
+  while (num >= 1) {
+newArr.push([...arr]);
+    num--;
+  }
+  return newArr;
+}
+console.log(copyMachine([true, false, true], 2));
