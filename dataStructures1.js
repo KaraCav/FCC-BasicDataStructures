@@ -57,3 +57,17 @@ newArr.push([...arr]);
   return newArr;
 }
 console.log(copyMachine([true, false, true], 2));
+
+// 9. Combine Arrays with the Spread Operator
+function spreadOut() {
+  let fragment = ['to', 'code'];
+  let sentence = ['learning', ...fragment, 'is', 'fun'];
+  return sentence;
+}
+console.log(spreadOut());
+
+//10. Check For The Presence of an Element With indexOf()
+function quickCheck(arr, elem) {
+ return arr.indexOf(elem) > -1 ? true : false;
+}
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
