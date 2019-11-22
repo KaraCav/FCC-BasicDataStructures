@@ -83,3 +83,13 @@ function filteredArray(arr, elem) {
   return newArr;
 }
 console.log(filteredArray([[3, 2, 3], [1, 6, 3], [19, 1, 9]], 3)); // Returns [[19,1,9]]
+
+// 12. Replace Loops using Recursion
+function sum(arr, n) {
+  if( n <= 0) {
+    return arr[0];
+  } else {
+  return sum(arr, n-1) + arr[n];
+  }
+}
+
