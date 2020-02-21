@@ -31,3 +31,24 @@ let userActivity = {
 };
 userActivity.data.online = 45;
 console.log(userActivity);
+
+// 18. Access Property Names with Bracket Notation
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28
+};
+function checkInventory(scannedItem) {
+  return foods[scannedItem];
+}
+console.log(checkInventory("apples"));
+
+// 19. Use the delete Keyword to Remove Object Properties
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+};
+delete foods.oranges;
+delete foods.plums;
+console.log(foods);
