@@ -53,7 +53,7 @@ delete foods.oranges;
 delete foods.plums;
 console.log(foods);
 
-// 20. Check if an Object has a Property
+// Object for numbers 20-22:
 let users = {
   Alan: {
     age: 27,
@@ -68,6 +68,7 @@ let users = {
     online: true
   }
 };
+// 20. Check if an Object has a Property
 
 function isEveryoneHere(obj) {
   if('Alan' in users && 'Jeff' in users && 'Sarah' in users) {
@@ -89,15 +90,38 @@ function countOnline(usersObj) {
   }
   return onlineUsers;
 }
-let usersObj = {
-  Alan: {
-    online: false
-  },
-  Jeff: {
-    online: true
-  },
-  Sarah: {
-    online: false
-  }
+
+console.log(countOnline(users));
+
+// 22. Generate an Array of All Object Keys with Object.keys()
+
+function getArrayOfUsers(obj) {
+  return Object.keys(users);
 }
-console.log(countOnline(usersObj));
+console.log(getArrayOfUsers(users));
+
+// 23. Modify an Array Stored in an Object
+let user = {
+  name: 'Kenneth',
+  age: 28,
+  data: {
+    username: 'kennethCodesAllDay',
+    joinDate: 'March 26, 2016',
+    organization: 'freeCodeCamp',
+    friends: [
+      'Sam',
+      'Kira',
+      'Tomo'
+    ],
+    location: {
+      city: 'San Francisco',
+      state: 'CA',
+      country: 'USA'
+    }
+  }
+};
+function addFriend(userObj, friend) {
+  userObj.data.friends.push(friend);
+  return userObj.data.friends;
+}
+console.log(addFriend(user, 'Pete'));
