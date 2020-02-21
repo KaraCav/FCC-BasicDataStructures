@@ -52,3 +52,52 @@ let foods = {
 delete foods.oranges;
 delete foods.plums;
 console.log(foods);
+
+// 20. Check if an Object has a Property
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  }
+};
+
+function isEveryoneHere(obj) {
+  if('Alan' in users && 'Jeff' in users && 'Sarah' in users) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+console.log(isEveryoneHere(users));
+
+// 21. Iterate Through the Keys of an Object with a for...in Statement
+function countOnline(usersObj) {
+  let onlineUsers = 0;
+  for (let user in usersObj) {
+    if(usersObj[user].online === true) {
+      onlineUsers += 1;
+    }
+  }
+  return onlineUsers;
+}
+let usersObj = {
+  Alan: {
+    online: false
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false
+  }
+}
+console.log(countOnline(usersObj));
